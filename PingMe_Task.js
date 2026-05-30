@@ -398,7 +398,7 @@ async function runAccount(acc, currentRunCount) {
       const hollowCount = MAX_VIDEO - solidCount;
       const progressBar = '■'.repeat(solidCount) + '□'.repeat(hollowCount);
       
-      const shortName = res.accountName.split('@')[0];
+      const shortName = `账号${i + 1}`;
 
       const checkMark = res.checkInStr.includes('×') ? '×' : '✓';
       

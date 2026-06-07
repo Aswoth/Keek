@@ -1,0 +1,42 @@
+name: 模块跳转 Egern
+description: |
+  支持以下网站：
+  https://hub.kelee.one
+  https://surge.qingr.moe
+  https://kelvinlab.wuyra.com
+icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/emby/mooguu(4)-emby.png
+
+dns: {}
+
+body_rewrites:
+  # PluginHub / Kelee
+  - response_regex:
+      match: https://(pluginhub|hub)\.kelee\.one/
+      find: loon://import\?plugin=
+      replace: egern:///modules/new?url=
+
+  # Surge Module Hub
+  - response_regex:
+      match: https://surge\.qingr\.moe/
+      find: surge:///install-module\?url=
+      replace: egern:///modules/new?url=
+
+  # KelvinLab 模块安装
+  - response_regex:
+      match: ^https?:\/\/kelvinlab\.wuyra\.com\/list.json
+      find: loon:\/\/import\?plugin=|surge:\/\/\/install-module\?url=
+      replace: egern:///modules/new?url=
+
+  # KelvinLab 分流安装
+  - response_regex:
+      match: ^https?:\/\/kelvinlab\.wuyra\.com\/list.json
+      find: https:\/\/www\.nsloon\.com\/openloon\/import\?rules=
+      replace: egern:///rules/new?type=rule_set&policy=DIRECT&match=
+
+mitm:
+  hostnames:
+    includes:
+      - pluginhub.kelee.one
+      - hub.kelee.one
+      - surge.qingr.moe
+      - kelvinlab.wuyra.com

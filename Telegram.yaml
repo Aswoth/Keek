@@ -23,7 +23,7 @@ scriptings:
   - http_request:
       name: Telegram 链接重定向
       match: ^https?://t\.me/.+
-      script_url: https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/TgRedirect.js
+      script_url: https://raw.githubusercontent.com/Aswoth/Keek/refs/heads/main/TGRedirect.js
       timeout: 10
 
 mitm:

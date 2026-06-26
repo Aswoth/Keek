@@ -13,7 +13,7 @@ const SCHEME = {
   iMe: "ime",
   Nicegram: "ng",
   Lingogram: "lingo",
-  Nagram: "nagram",
+  Nagram: "tg",
 };
 
 function qval(qs, key) {
@@ -59,7 +59,6 @@ export default async function (ctx) {
 
   const client = (ctx.env?.CLIENT || "Telegram").trim();
 
-  // fallback 防炸（避免未知值导致错误）
   const scheme = SCHEME[client] || "tg";
 
   let tail = m[1];

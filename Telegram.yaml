@@ -1,7 +1,8 @@
 
 name: Telegram 跳转
 description: 将 电报 重定向到你选择的 Telegram 客户端
-｛因为目前Nagram没有自己的scheme而是劫持了tg官方的，优先级比官方还高。故目前选nagram会跳转到tg（反正他也会劫持🌚）用官方的也会被劫持到nagram，如果介意可以用原版“https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/Telegram.yaml”｝
+description: |-
+ ｛因为目前Nagram没有自己的scheme而是劫持了tg官方的，优先级比官方还高。故目前选nagram会跳转到tg（反正他也会劫持🌚）用官方的也会被劫持到nagram，如果介意可以用原版“https://raw.githubusercontent.com/IBL3ND/module/refs/heads/main/Telegram.yaml”｝
 author: panda𝕏
 icon: https://iili.io/KQX347S.png
 
